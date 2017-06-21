@@ -11,6 +11,10 @@ public class BankAccountTest {
 	public void testSetStatus(){
 		BankAccount account = new BankAccount();
 		assertTrue(account.setStatus(BankAccount.STATUS.OPEN));
+		assertTrue(account.setStatus(BankAccount.STATUS.CLOSED));
+		assertTrue(account.setStatus(BankAccount.STATUS.OFAC_FREEZE));
+		assertFalse(account.setStatus(null));
+	//	assertFalse(account.setStatus(BankAccount.STATUS.SUSPENDED));
 
 	}
 	
