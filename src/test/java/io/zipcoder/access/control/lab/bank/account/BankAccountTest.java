@@ -18,6 +18,13 @@ public class BankAccountTest {
 
 	}
 	
+    @Test
+    public void testRemainder(){
+        Integer one = 7, two = 3;
+        Integer expected = 1;
+        Integer actual = this.math.remainder(one, two);
+        assertTrue(expected == actual);
+    }
 	
 	
 }
